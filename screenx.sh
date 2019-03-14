@@ -45,7 +45,7 @@ case "$1" in
 	xfce4-screenshooter -r -s $var$name
 esac
 
-lftp -c "open -u $user,$pass $rserver; put -O $sdir ~/$name"
+lftp -c "open -u $user,$pass $rserver; put -O $sdir $var$name"
 
 rm $var$name
 
