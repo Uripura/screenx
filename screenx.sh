@@ -36,12 +36,13 @@ case "$1" in
 	3)
 	xfce4-screenshooter -f -s ~/$name
 	;;
+
 # Default: only region
 	*)
 	xfce4-screenshooter -r -s ~/$name
 esac
 
-#lftp -c "open -u $user,$pass $rserver; put -O $sdir ~/$name"
+lftp -c "open -u $user,$pass $rserver; put -O $sdir ~/$name"
 
 rm $name
 
