@@ -25,4 +25,6 @@ xfce4-screenshooter -r -s ~/$name
 
 lftp -c "open -u $user,$pass $rserver; put -O $sdir ~/$name"
 
+rm $name
+
 echo $server$rdir$name | xclip -selection c
